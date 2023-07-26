@@ -63,7 +63,10 @@ export const postsRouter = createTRPCRouter({
   create: privateProcedure
     .input(
       z.object({
-        content: z.string().min(1).max(255),
+        content: z
+          .string()
+          .min(1, { message: "Can't post empty tweet" })
+          .max(240, { message: "Tweets must under 240 characters long" }),
       })
     )
     .mutation(async ({ ctx, input }) => {
