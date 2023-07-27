@@ -23,7 +23,7 @@ const ProfilePage: NextPage<{ username: string }> = ({ username }) => {
             alt={`${data.username}'s profile picture`}
             width={128}
             height={128}
-            className="absolute bottom-0 left-0 -mb-[64px] ml-4 rounded-full border-2 border-black bg-black"
+            className="absolute bottom-0 left-0 -mb-[64px] ml-4 rounded-full border-2 border-white bg-black"
           />
         </div>
         <div className="h-[64px]"></div>
